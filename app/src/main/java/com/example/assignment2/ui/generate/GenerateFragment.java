@@ -1,13 +1,8 @@
-package com.example.assignment2.ui.home;
+package com.example.assignment2.ui.generate;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.os.Environment;
-import android.os.Handler;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,16 +10,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.assignment2.ChoseActivity;
 import com.example.assignment2.FolderUtil;
-import com.example.assignment2.MainActivity;
-import com.example.assignment2.QRCodeUtil;
 import com.example.assignment2.R;
 import com.yzq.zxinglibrary.encode.CodeCreator;
 
@@ -35,9 +26,9 @@ import java.io.IOException;
 
 import static android.app.Activity.RESULT_OK;
 
-public class HomeFragment extends Fragment {
+public class GenerateFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private GenerateViewModel generateViewModel;
     private ImageView qrImageView;
     private TextView qrTextView;
     private Button generateButton;
@@ -47,8 +38,8 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
+        generateViewModel =
+                ViewModelProviders.of(this).get(GenerateViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         qrImageView = root.findViewById(R.id.qrImageView);
