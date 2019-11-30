@@ -40,7 +40,7 @@ public class GenerateFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         generateViewModel =
                 ViewModelProviders.of(this).get(GenerateViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        View root = inflater.inflate(R.layout.fragment_generate, container, false);
 
         qrImageView = root.findViewById(R.id.qrImageView);
         qrTextView =  root.findViewById(R.id.inputEditText);

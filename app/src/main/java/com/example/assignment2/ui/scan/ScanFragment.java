@@ -1,4 +1,4 @@
-package com.example.assignment2.ui.dashboard;
+package com.example.assignment2.ui.scan;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,34 +7,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.assignment2.MainActivity;
 import com.example.assignment2.R;
 import com.yzq.zxinglibrary.android.CaptureActivity;
-import com.yzq.zxinglibrary.bean.ZxingConfig;
 import com.yzq.zxinglibrary.common.Constant;
 
 import static android.app.Activity.RESULT_OK;
 
-public class DashboardFragment extends Fragment {
+public class ScanFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private ScanViewModel scanViewModel;
     private Button scanButton;
     private EditText resultEditText;
     private final int REQUEST_CODE_SCAN = 1;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        scanViewModel =
+                ViewModelProviders.of(this).get(ScanViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_scan, container, false);
 
 
         scanButton = root.findViewById(R.id.scanButton);

@@ -1,4 +1,4 @@
-package com.example.assignment2.ui.notifications;
+package com.example.assignment2.ui.folder;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -18,9 +17,9 @@ import com.example.assignment2.FolderDetailActivity;
 import com.example.assignment2.FolderUtil;
 import com.example.assignment2.R;
 
-public class NotificationsFragment extends Fragment {
+public class FolderFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private FolderViewModel folderViewModel;
     private ListView listView;
     private String[] folderList;
     ArrayAdapter<String> adapter;
@@ -28,9 +27,9 @@ public class NotificationsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         setHasOptionsMenu(true);
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
+        folderViewModel =
+                ViewModelProviders.of(this).get(FolderViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_folder, container, false);
         listView = (ListView)root.findViewById(R.id.folderList);
 
 
