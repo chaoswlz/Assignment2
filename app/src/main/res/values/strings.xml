@@ -3,4 +3,10 @@
     <string name="title_home">Generate</string>
     <string name="title_dashboard">Read</string>
     <string name="title_notifications">Folder</string>
+    <string name="add">Add</string>
+    <string name="scan">Scan</string>
+    <string name="save">Save</string>
+    <string name="generate">Generate</string>
+    <string name="qr">QR</string>
+
 </resources>

@@ -24,36 +24,4 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         assertEquals("com.example.assignment2", appContext.getPackageName());
     }
-
-    @Test
-    public void testGenerateFolder(){
-        String testFolder1 = "t1";
-        String testFolder2 = "t2";
-        String testFolder3 = "t3";
-
-        generateFolder(appContext,testFolder1);
-        generateFolder(appContext,testFolder2);
-
-        String[] folders = FolderUtil.getAllFolders(appContext);
-
-        assertTrue(isInArray(folders,testFolder1));
-        assertTrue(isInArray(folders,testFolder2));
-        assertFalse(isInArray(folders,testFolder3));
-
-        generateFolder(appContext,testFolder3);
-        assertTrue(isInArray(folders,testFolder3));
-
-
-
-    }
-
-    public boolean isInArray(String[] array,String item){
-        for(int i = 0; i<array.length;i++){
-            if (array[i] == item){
-                return true;
-            }
-        }
-
-        return false;
-    }
 }

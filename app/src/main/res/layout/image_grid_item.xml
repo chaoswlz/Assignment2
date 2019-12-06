@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:layout_margin="5dp"
         android:gravity="center_horizontal"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/qr" />
 
 </LinearLayout>

@@ -4,6 +4,6 @@
     <item
         android:id="@+id/addFolderButton"
         android:icon="@drawable/ic_add"
-        android:title="add"
+        android:title="@string/add"
         app:showAsAction="always" />
 </menu>
